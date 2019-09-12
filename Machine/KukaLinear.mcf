@@ -1,0 +1,127 @@
+{
+  "Machine": {
+    "MainChain" : ["TrackStatic", "LinearAxisT", "BaseA", "ArmA", "ArmB", "ArmC", 
+	"ArmD", "ArmE", "ArmF", "Spindle", "Tool"]
+  },
+  "Links":[{
+    "ID": "TrackStatic",
+    "Type" : "STATIC",
+    "Base" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+	"Model" : "TrackStatic.Kuka300.mesh"
+  },{
+    "ID": "LinearAxisT",
+    "Type" : "LINEAR_JOINT",
+    "State" : "DYNAMIC",
+    "Name" : "T",
+    "Home" : 0,
+    "Minimum" : -300,
+    "Maximum" : 3200,
+    "Position" : 1900,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+    "Direction" : [1, 0, 0],
+	"Model" : "TrackDynamic.Kuka300.mesh"
+  },{
+    "ID": "BaseA",
+    "Type" : "STATIC",
+    "Base" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+	"Model" : "A.Kuka300.mesh"
+  },{
+    "ID": "ArmA",
+    "Type" : "ARM",
+    "Name" : "A",
+    "Home" : 0,
+    "Position" : 30,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+    "Attachment" : [1,0,0,350,0,1,0,0,0,0,1,675,0,0,0,1],
+    "Direction" : [0, 0, 1],
+	"Model" : "AB.Kuka300.mesh"
+  },{
+    "ID": "ArmB",
+    "Type" : "ARM",
+    "Name" : "B",
+    "Home" : -90,
+    "Minimum" : -140,
+    "Maximum" : -5,
+    "Position" : -90,
+	"Offset" : 90,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,0,350,1,0,0,0,0,1,675,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,675,0,0,0,1],
+    "Direction" : [0, 1, 0],
+	"Model" : "BC.Kuka300.mesh"
+  },{
+    "ID": "ArmC",
+    "Type" : "ARM",
+    "Name" : "C",
+    "Home" : 90,
+    "Minimum" : -120,
+    "Maximum" : 155,
+    "Position" : 60,
+	"Offset" : -90,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,350,0,1,0,0,0,0,1,1825,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Direction" : [0, 1, 0],
+	"Model" : "CD.Kuka300.mesh"
+  },{
+    "ID": "ArmD",
+    "Type" : "ARM",
+    "Name" : "D",
+    "Home" : 0,
+    "Position" : 15,
+	"Offset" : 0,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,0,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Attachment" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Direction" : [1, 0, 0],
+	"Model" : "DE.Kuka300.mesh"
+  },{
+    "ID": "ArmE",
+    "Type" : "ARM",
+    "Name" : "E",
+    "Home" : 0,
+    "Minimum" : -122,
+    "Maximum" : 122,
+    "Position" : 0,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Attachment" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Direction" : [0, 1, 0],
+	"Model" : "EF.Kuka300.mesh"
+  },{
+    "ID": "ArmF",
+    "Type" : "ARM",
+    "Name" : "F",
+    "Home" : 0,
+    "Position" : 0,
+    "Weight" : 1,
+    "State" : "DYNAMIC",
+    "Base" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Attachment" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Direction" : [1, 0, 0],
+	"Model" : "F.Kuka300.mesh"
+  },{
+    "ID": "Spindle",
+    "Type" : "STATIC",
+    "Base" : [1,0,0,1350,0,1,0,0,0,0,1,1784,0,0,0,1],
+    "Attachment" : [1,0,0,2200,0,1,0,0,0,0,1,1000,0,0,0,1],
+	"Model" : "Spindle.Kuka300.mesh"
+  },{
+    "ID": "Tool",
+    "Type" : "STATIC",
+    "Base" : [1,0,0,480,0,-1,0,0,0,0,-1,410,0,0,0,1],
+    "Attachment" : [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+	"Model" : "EndMill-F20.mesh"
+  }]
+}
